@@ -3,7 +3,6 @@ plotly
 seaborn
 statsmodels 
 altair
-matplotlib.pyplot
 pandas
 plotly.express
 plotly.figure_factory
