@@ -19,6 +19,8 @@ st.title("Main Page")
 st.write("*Regarding prediction model, check second page on sidebar* :sunglasses:")
 st.sidebar.success("Select a page above.")
 
+st.text("")
+st.markdown("***")
 
 option=st.selectbox(
     "The variables are medical terminologies. Choose from below to see further discription about them",
