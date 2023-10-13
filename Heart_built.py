@@ -23,7 +23,7 @@ st.sidebar.success("Select a page above.")
 option=st.selectbox(
     "The variables are medical terminologies. Choose from below to see further discription about them",
     ("age","sex", "cp", "trestbps", "chol", 
-     "fbS", "restecg", "thalach", 
+     "fbs", "restecg", "thalach", 
      "exang", "oldpeak", "slope", "ca", "thal", "num")
 )
 
