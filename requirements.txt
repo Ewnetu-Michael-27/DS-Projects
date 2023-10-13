@@ -5,5 +5,5 @@ statsmodels
 altair
 pandas
 scikit-learn
-math
+
 
