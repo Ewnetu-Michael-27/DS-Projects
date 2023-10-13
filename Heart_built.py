@@ -1,11 +1,7 @@
-from inspect import stack
-from tkinter import Grid
 import streamlit as st
 import seaborn as sns
 import altair as alt
 from altair import datum
-import matplotlib.pyplot as plt
-import hiplot as hip 
 import pandas as pd
 import plotly.express as px
 
