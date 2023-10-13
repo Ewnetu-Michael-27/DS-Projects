@@ -2,8 +2,6 @@ streamlit
 plotly
 seaborn
 statsmodels 
-inspect
-tkinter
 altair
 matplotlib.pyplot
 pandas
