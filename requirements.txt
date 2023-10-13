@@ -2,3 +2,17 @@ streamlit
 plotly
 seaborn
 statsmodels 
+inspect
+tkinter
+altair
+matplotlib.pyplot
+pandas
+plotly.express
+plotly.figure_factory
+sklearn
+statsmodels.api
+sklearn.metrics
+math
+sklearn.linear_model
+sklearn.model_selection
+sklearn.linear_model
