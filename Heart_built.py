@@ -19,8 +19,6 @@ st.title("Main Page")
 
 st.write("*Regarding prediction model, check second page on sidebar* :sunglasses:")
 
-st.text("")
-st.markdown("***")
 
 st.sidebar.success("Select a page above.")
 
