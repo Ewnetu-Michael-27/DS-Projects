@@ -4,8 +4,6 @@ seaborn
 statsmodels 
 altair
 pandas
-plotly.express
-plotly.figure_factory
 sklearn
 statsmodels.api
 math
