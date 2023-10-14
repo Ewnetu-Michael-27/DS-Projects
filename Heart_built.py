@@ -89,9 +89,9 @@ elif option2 in ["sex", "cp", "fbs", "restecg", "exang", "slope", "ca", "thal", 
 st.text("")
 st.markdown("***")
 
-st.write("Click on the button below to see Parrllel plot of Age, Thalach, Oldpeak, num")
+#st.write("Click on the button below to see Parrllel plot of Age, Thalach, Oldpeak, num")
 
-x=st.button("Parallel Plot")
+#x=st.button("Parallel Plot")
 
 fig = px.parallel_coordinates(df_heart[["age","thalach","oldpeak","num"]], color="num", labels={"num": "Num",
                 "age": "Age", "thalach": "Thalach",
