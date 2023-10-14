@@ -89,7 +89,7 @@ elif option2 in ["sex", "cp", "fbs", "restecg", "exang", "slope", "ca", "thal", 
 st.text("")
 st.markdown("***")
 
-#st.write("Click on the button below to see Parrllel plot of Age, Thalach, Oldpeak, num")
+st.write("Parrllel plot of Age, Thalach, Oldpeak, num")
 
 #x=st.button("Parallel Plot")
 
