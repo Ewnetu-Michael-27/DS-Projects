@@ -83,7 +83,7 @@ if option2 in ["oldpeak", "trestbps", "thalach", "age", "chol"]:
 
 #categorical variables
 elif option2 in ["sex", "cp", "fbs", "restecg", "exang", "slope", "ca", "thal", "num"]:
-    pd_plot=pd.crosstab(,df_heart["num"],df_heart[option2]).plot(kind='bar')
+    pd_plot=pd.crosstab(df_heart["num"],df_heart[option2]).plot(kind='bar')
     st.pyplot(pd_plot.figure)
 
 st.text("")
