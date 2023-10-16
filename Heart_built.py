@@ -77,7 +77,7 @@ if option2 in ["oldpeak", "trestbps", "thalach", "age", "chol"]:
     chart_alt=alt.Chart(df_heart).mark_boxplot().encode(
     alt.Y(option2, type='quantitative').scale(zero=True),
     alt.X('num:N', type='nominal'),
-    color='num:N').properties(width=600).interactive()
+    color=alt.Color('num:N')).properties(width=600).interactive()
 
     st.altair_chart(chart_alt)
 
