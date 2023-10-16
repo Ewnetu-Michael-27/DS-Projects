@@ -95,9 +95,9 @@ st.write("Parrllel plot of Age, Thalach, Oldpeak, num")
 
 fig = px.parallel_coordinates(df_heart[["age","thalach","oldpeak","num"]], color="num", labels={"num": "Num",
                 "age": "Age", "thalach": "Thalach",
-                "oldpeak": "Oldpeak",},
-                             color_continuous_scale=px.colors.diverging.Tealrose,
-                             color_continuous_midpoint=2)
+                "oldpeak": "Oldpeak",})#,
+                             #color_continuous_scale=px.colors.diverging.Tealrose,
+                             #color_continuous_midpoint=2)
 st.plotly_chart(fig)
 
 
