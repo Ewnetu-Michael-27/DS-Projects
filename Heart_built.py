@@ -8,7 +8,7 @@ import plotly.express as px
 
 
 col=["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope", "ca", "thal", "num"]
-#df_heart=pd.read_csv("df_heart_clean_2.csv")
+df_heart=pd.read_csv("df_heart_clean_2.csv")
 
 
 st.set_page_config(
