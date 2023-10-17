@@ -114,7 +114,8 @@ fig_2 = px.parallel_coordinates(df_heart[["chol","num"]], color="num",
                               labels={"num": "Num",
                 "age": "Age", "thalach": "Thalach",
                 "oldpeak": "Oldpeak",},
-                             color_continuous_scale=px.colors.diverging.Tealrose)
+                             color_continuous_scale=px.colors.diverging.Tealrose,
+                               width=600,height=600)
                              #color_continuous_midpoint=2)
 st.plotly_chart(fig_2)
 
