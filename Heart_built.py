@@ -110,7 +110,7 @@ st.plotly_chart(fig)
 st.text("")
 st.markdown("***")
 
-fig_2 = px.parallel_coordinates(df_heart[["chol","thalach","num"]], color="num", 
+fig_2 = px.parallel_coordinates(df_heart[["chol","fbs","num"]], color="num", 
                               labels={"num": "Num",
                 "age": "Age", "thalach": "Thalach",
                 "oldpeak": "Oldpeak",},
