@@ -39,36 +39,36 @@ option=st.selectbox(
 if option=="age":
     st.write("Age of the Individual")
 elif option=="sex":
-    st.write("Sex of the Individual")
+    st.write("Sex of the Individual: 1 for Male and 0 for Female")
 elif option=="cp":
-    st.write("Chest Pain Types")
+    st.write("Chest Pain Types. 1:ypical Angina, 2: Atypical Angina, 3: Non-Anginal Pain, 4: asymptomatic")
 elif option=="trestbps":
     st.write("Resting Blood Pressure in mm of Hg at the admission to Hospital")
 elif option=="chol":
     st.write("Serum Cholestrol in mg/dl")
 elif option=="fbs":
-    st.write("Fasting Blood Sugar")
+    st.write("Fasting Blood Sugar >120 mg/dl. 1: True, 0:False")
 elif option=="restecg":
-    st.write("Resting Electrocardiographic Results")
+    st.write("Resting Electrocardiographic Results. 0:Normal, 1:Having ST-T wave abnormality, 2:showing probable or definite left ventricular hypertrophy")
 elif option=="thalach":
     st.write("maximum Heart Rate Achieved")
 elif option=="exang":
-    st.write("Exercise Induced Angina")
+    st.write("Exercise Induced Angina. 1:Yes, 0:NO")
 elif option=="oldpeak":
     st.write("ST Depression Induced by excercise relative to rest")
 elif option=="slope":
-    st.write("The Slope of the peak exercise ST segment")
+    st.write("The Slope of the peak exercise ST segment. 1: upsloping, 2: Flat, 3: Down sloping")
 elif option=="ca":
     st.write("Number of major vessels colored by fluroscopy")
 elif option=="thal":
-    st.write("Thallium scintigraphy")
+    st.write("Thallium scintigraphy. 3: Normal, 6: Fixed Defect, 7: Reversable Defect")
 elif option=="num":
     st.write("Diagnosis of Heart Disease (Angiographic Disease Status)")
 
 st.text("")
 st.markdown("***")
 
-st.write("In this dataset, 'num' is the target variable that shows the presence of CAD: 0 for absence and 1 for presence. (See explanation below image)")
+st.write("In this dataset, 'num' is the target variable that shows the presence of CAD: 0 for absence (<50% diameter narrowing) and 1 for presence (>50% diameter narrowing). (See explanation below image)")
 pd_plot=pd.crosstab(df_heart["num"], df_heart["num"]).plot(kind='bar')
 st.pyplot(pd_plot.figure)
 with st.expander("See explanation"):
@@ -88,7 +88,7 @@ pd_plot=pd.crosstab(df_heart[option1], df_heart["num"]).plot(kind='bar')
 st.pyplot(pd_plot.figure)
 with st.expander("See explanation"):
     if option1=="sex":
-        st.write("Sex of the Individual")
+        st.write("The data is not balanced in ")
     elif option1=="cp":
         st.write("Chest Pain Types")
     elif option1=="fbs":
