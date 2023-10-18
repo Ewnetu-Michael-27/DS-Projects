@@ -39,7 +39,8 @@ p_values=[]
     
 for i in result_1.pvalues:
     p_values.append(i)
-
+    
+col=X.columns 
 df_p_val=pd.DataFrame(list(zip(p_values, col)), columns=["P_values", "Variables"])
 chart_1 = alt.Chart(df_p_val).mark_point().encode(
     x='Variables:N',
