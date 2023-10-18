@@ -9,6 +9,7 @@ from sklearn.model_selection import train_test_split
 import statsmodels.api as sm
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import math
+import numpy as np
 
 st.set_page_config(
     page_title="Logreg on The Heart Dataset",
