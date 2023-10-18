@@ -99,8 +99,8 @@ if button_3:
     st.metric("Accuracy over Test Samples",score_x)
 
     z = np.flip(confusion_matrix_1,0)
-    x = ['Predict 0', 'Prdict 1']
-    y =  ['True 1', 'True 0']
+    x = ['Predict 1', 'Prdict 0']
+    y =  ['True 0', 'True 1']
 
     # change each element of z to type string for annotations
     z_text = [[str(x) for x in y] for y in z]
