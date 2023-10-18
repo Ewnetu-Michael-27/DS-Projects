@@ -136,7 +136,7 @@ option3=st.selectbox(
 )
 
 temp_array=["num"]
-fig_2 = px.parallel_coordinates(df_heart[options3+temp_array], color="num", 
+fig_2 = px.parallel_coordinates(df_heart[option3+temp_array], color="num", 
                               labels={"num": "Num",
                 "chol": "Cholestrol Level","slope":"Slope of PE-ST-S"},
                              color_continuous_scale=px.colors.diverging.Tealrose,
