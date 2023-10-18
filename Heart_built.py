@@ -66,7 +66,7 @@ st.text("")
 st.markdown("***")
 
 st.write("In this dataset, 'num' is the target variable that shows the presence of CAD: 0 for absence and 1 for presence.")
-pd_plot=pd.crosstab(df_heart["num"], df_heart["num"]).plot(kind='bar', figsize=(3,3))
+pd_plot=pd.crosstab(df_heart["num"], df_heart["num"]).plot(kind='bar')
 st.pyplot(pd_plot.figure)
 with st.expander("See explanation"):
     st.write("The target is balanced. Roughly equal number of values for presence and absence.")
