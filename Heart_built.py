@@ -130,7 +130,13 @@ st.markdown("***")
 
 st.write("Level of Cholestrol (Chol) is not a good indicator for the presence of CAD. Both 0 and 1 map to the same values of Cholestrol level")
 
-fig_2 = px.parallel_coordinates(df_heart[["chol","num","slope"]], color="num", 
+option3=st.selectbox(
+    "Add text",
+    ("chol", "trestbps","fbs", "restecg","oldpeak", "slope")
+)
+
+temp_array=["num"]
+fig_2 = px.parallel_coordinates(df_heart[options3+temp_array], color="num", 
                               labels={"num": "Num",
                 "chol": "Cholestrol Level","slope":"Slope of PE-ST-S"},
                              color_continuous_scale=px.colors.diverging.Tealrose,
