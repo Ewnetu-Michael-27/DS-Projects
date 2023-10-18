@@ -4,6 +4,7 @@ import altair as alt
 from altair import datum
 import pandas as pd
 import plotly.express as px
+from PIL import Image
 
 
 
