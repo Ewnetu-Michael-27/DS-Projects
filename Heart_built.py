@@ -68,7 +68,7 @@ elif option=="num":
 st.text("")
 st.markdown("***")
 
-st.write("In this dataset, 'num' is the target variable that shows the presence of CAD: 0 for absence (<50% diameter narrowing) and 1 for presence (>50% diameter narrowing). (See explanation below image)")
+st.write("In this dataset, 'num' is the target variable that shows the presence of CAD: 0 for absence (<50% diameter narrowing) and 1 for presence (>50% diameter narrowing). (See explanation below)")
 pd_plot=pd.crosstab(df_heart["num"], df_heart["num"]).plot(kind='bar')
 st.pyplot(pd_plot.figure)
 with st.expander("See explanation"):
@@ -81,18 +81,18 @@ st.markdown("***")
 st.write("Out of the 13 clinical and non-invasive tests (Features), 8 of them are categorical variables. Below, let's see their relationship with the presence of CAD (num)")
 
 option1=st.selectbox(
-    "Pick a categorical variable to see its relatioship with num (See explanation below image)",
+    "Pick a categorical variable to see its relatioship with num (See explanation below for each feature)",
     ("sex", "cp", "fbs", "restecg","exang", "slope", "ca", "thal")
 )
 pd_plot=pd.crosstab(df_heart[option1], df_heart["num"]).plot(kind='bar')
 st.pyplot(pd_plot.figure)
 with st.expander("See explanation"):
     if option1=="sex":
-        st.write("The data is not balanced in ")
+        st.write("The data is not balanced in terms of sex: more male than female. Makes it difficult to analyze presence of CAD interms of sex")
     elif option1=="cp":
-        st.write("Chest Pain Types")
+        st.write("Chest Pain of value 4 means asymptomatic. However, it is related with the most count of presence of CAD")
     elif option1=="fbs":
-        st.write("Fasting Blood Sugar")
+        st.write("Fasting Blood Sugar feature is imbalanced also it does not help in discerning presence of CAD")
     elif option1=="restecg":
         st.write("Resting Electrocardiographic Results")
     elif option1=="exang":
@@ -111,7 +111,7 @@ st.markdown("***")
 st.write("The rest 5 Features are continous variables. Below, let's see their relationship with the presence of CAD (num)")
 
 option2=st.selectbox(
-    "Pick a continious variable to see its relatioship with num (See explanation below image)",
+    "Pick a continious variable to see its relatioship with num (See explanation below)",
     ("age", "trestbps", "chol", "thalach", "oldpeak")
 )
 
