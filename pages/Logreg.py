@@ -28,22 +28,22 @@ st.write("Click here to utlize the Logit Model from Statsmodel and check the per
 
 button_1=st.button("Logit Model")
 
-if button_1:
-    logit_model=sm.Logit(y["num"],X)
-    result_1=logit_model.fit()
 
-    col=X.columns
-    st.write("Here are the P values for the variables")
-    col=X.columns 
-    p_values=[]
+logit_model=sm.Logit(y["num"],X)
+result_1=logit_model.fit()
+
+col=X.columns
+st.write("Here are the P values for the variables")
+col=X.columns 
+p_values=[]
     
-    for i in result_1.pvalues:
-        p_values.append(i)
+for i in result_1.pvalues:
+    p_values.append(i)
 
-    df_p_val=pd.DataFrame(list(zip(p_values, col)), columns=["P_values", "Variables"])
-    chart_1 = alt.Chart(df_p_val).mark_point().encode(
-        x='Variables:N',
-        y="P_values:Q",
+df_p_val=pd.DataFrame(list(zip(p_values, col)), columns=["P_values", "Variables"])
+chart_1 = alt.Chart(df_p_val).mark_point().encode(
+     x='Variables:N',
+      y="P_values:Q",
         # The highlight will be set on the result of a conditional statement
         color=alt.condition(
             alt.datum.P_values > 0.05,  
