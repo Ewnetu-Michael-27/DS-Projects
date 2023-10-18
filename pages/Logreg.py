@@ -63,6 +63,8 @@ with tab2:
     st.dataframe(df_p_val[df_p_val["P_values"]>0.05])
 with tab3:
     st.dataframe(df_p_val[df_p_val["P_values"]<0.05])
+with st.expander("See explanation"):
+    st.write("Select portion of the 'num' axis around 0 to see the relationship")
 
 st.text("")
 st.markdown("***")
