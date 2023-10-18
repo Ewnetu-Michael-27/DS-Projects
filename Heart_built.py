@@ -19,6 +19,7 @@ st.title("Pridicting Presence of Coronary Artery Disease (CAD)")
 
 st.write("Coronary artery disease (CAD) is caused by plaque buildup in the wall of the arteries that supply blood to the heart. Accoring to CDC, it is the most common type of heart disease in the US, killing 375,476 people in 2021.")
 
+st.write("The following dataset explores the relationship between 13 clinical and non-invasive tests and the presence of CAD for the goal of building a prediction model.")
 
 st.sidebar.success("Select a page above.")
 
