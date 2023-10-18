@@ -68,7 +68,7 @@ elif option=="num":
 st.text("")
 st.markdown("***")
 
-st.write("In this dataset, 'num' is the target variable that shows the presence of CAD: 0 for absence and 1 for presence.")
+st.write("In this dataset, 'num' is the target variable that shows the presence of CAD: 0 for absence and 1 for presence. (See explanation below image)")
 pd_plot=pd.crosstab(df_heart["num"], df_heart["num"]).plot(kind='bar')
 st.pyplot(pd_plot.figure)
 with st.expander("See explanation"):
@@ -81,7 +81,7 @@ st.markdown("***")
 st.write("Out of the 13 clinical and non-invasive tests (Features), 8 of them are categorical variables. Below, let's see their relationship with the presence of CAD (num)")
 
 option1=st.selectbox(
-    "Pick a categorical variable to see its relatioship with num",
+    "Pick a categorical variable to see its relatioship with num (See explanation below image)",
     ("sex", "cp", "fbs", "restecg","exang", "slope", "ca", "thal")
 )
 pd_plot=pd.crosstab(df_heart[option1], df_heart["num"]).plot(kind='bar')
@@ -96,7 +96,7 @@ st.markdown("***")
 st.write("The rest 5 Features are continous variables. Below, let's see their relationship with the presence of CAD (num)")
 
 option2=st.selectbox(
-    "Pick a continious variable to see its relatioship with num",
+    "Pick a continious variable to see its relatioship with num (See explanation below image)",
     ("age", "trestbps", "chol", "thalach", "oldpeak")
 )
 
@@ -112,9 +112,8 @@ with st.expander("See explanation"):
 st.text("")
 st.markdown("***")
 
-st.write("Parrllel plot of Age, Thalach, Oldpeak, num")
+st.write("In any age group, achiving higer heart rate (Thalach) and minimizing excersie induced ST Depression (Oldpeak) is related to absence of CAD:0")
 
-#x=st.button("Parallel Plot")
 
 fig = px.parallel_coordinates(df_heart[["age","thalach","oldpeak","num"]], color="num", 
                               labels={"num": "Num",
