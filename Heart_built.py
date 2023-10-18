@@ -77,11 +77,11 @@ st.write("The data is relatively clean: only 6 missing values in 303 rows; only 
 tab_a,tab_b=st.tabs(["The dataset before imputation","The dataset after imputation"])
 with tab_a:
     fig=plt.figure(figsize=(20,4))
-    sns.heatmap(df_heart_mi.eq('?').transpose(), cmap="crest")
+    sns.heatmap(df_heart_mi.eq('?').transpose(), cmap="crest").set(title='Missing Values')
     st.pyplot(fig)
 with tab_b:
     fig=plt.figure(figsize=(20,4))
-    sns.heatmap(df_heart.eq('?').transpose(), cmap="crest")
+    sns.heatmap(df_heart.eq('?').transpose(), cmap="crest").set(title='Missing Values')
     st.pyplot(fig)
 
 
