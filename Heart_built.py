@@ -128,7 +128,7 @@ with st.expander("See explanation"):
 st.text("")
 st.markdown("***")
 
-st.write("Level of Cholestrol (Chol), Resting Blood Pressure (Trestbps), Fasting Blood Sugar (FBS), Resting Electrocardiographic Results (Restecg), and The Slope of the peak excercise ST segment (Slope) are not a good indicators for the presence of CAD in of themselves. Hence, both output of the target, 0 and 1, are maped to the same values")
+st.write("Level of Cholestrol (Chol), Resting Blood Pressure (Trestbps), Fasting Blood Sugar (FBS), Resting Electrocardiographic Results (Restecg), and The Slope of the peak excercise ST segment (Slope) are not a good indicators for the presence of CAD in of themselves. Hence, both output of the target, 0 and 1, are maped to the same values of the features")
 
 option3=st.selectbox(
     "Add text",
