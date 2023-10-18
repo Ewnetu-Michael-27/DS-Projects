@@ -70,7 +70,16 @@ elif option=="num":
 st.text("")
 st.markdown("***")
 
-
+st.write("**About The Data**")
+tab_a,tab_b=st.tab(["The dataset before imputation.","The dataset after imputation."])
+with tab_a:
+    fig=plt.figure(figsize=(20,4))
+    sns.heatmap(df_heart_mi.eq('?').transpose(), cmap="crest")
+    st.pyplot(fig)
+with tab_b:
+    fig=plt.figure(figsize=(20,4))
+    sns.heatmap(df_heart.eq('?').transpose(), cmap="crest")
+    st.pyplot(fig)
 
 
 st.text("")
