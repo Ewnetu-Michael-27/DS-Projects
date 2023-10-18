@@ -89,7 +89,7 @@ st.pyplot(pd_plot.figure)
 with st.expander("See explanation"):
     if option1=="sex":
         st.write("Sex of the Individual")
-    elif optio1n=="cp":
+    elif option1=="cp":
         st.write("Chest Pain Types")
     elif option1=="fbs":
         st.write("Fasting Blood Sugar")
