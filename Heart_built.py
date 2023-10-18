@@ -112,7 +112,7 @@ with st.expander("See explanation"):
 st.text("")
 st.markdown("***")
 
-st.write("In any age group, achiving higer heart rate (Thalach) and minimizing excersie induced ST Depression (Oldpeak) is related to absence of CAD:0")
+st.write("In any age group, achieving higer heart rate (Thalach) and minimizing excersie induced ST Depression (Oldpeak) is related to absence of CAD:0")
 
 
 fig = px.parallel_coordinates(df_heart[["age","thalach","oldpeak","num"]], color="num", 
