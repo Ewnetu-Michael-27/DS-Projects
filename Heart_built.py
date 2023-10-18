@@ -158,6 +158,8 @@ with st.expander("See explanation"):
 st.text("")
 st.markdown("***")
 
+st.write("**Further Insights on The Relationship between the features and Target.**")
+
 st.write("In any age group, achieving higer heart rate (Thalach) and minimizing excersie induced ST Depression (Oldpeak) is related to absence of CAD:0")
 
 
@@ -193,4 +195,7 @@ fig_2 = px.parallel_coordinates(df_heart[temp_array], color="num",
                              #color_continuous_midpoint=2)
 st.plotly_chart(fig_2)
 
+st.write("**Quick Summary**")
+st.write("Out of the 13 features, 5 features have weak influence on the presence or absence of CAD (Chol,Trestbps,FBS,Restecg,Slope)")
+st.write("In the next page, the relationship between the features and the targets is explored from the perspective of prediction modeling")
 
