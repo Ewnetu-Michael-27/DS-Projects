@@ -123,7 +123,7 @@ fig = px.parallel_coordinates(df_heart[["age","thalach","oldpeak","num"]], color
                              #color_continuous_midpoint=2)
 st.plotly_chart(fig)
 with st.expander("See explanation"):
-    st.write("Select portion of the "num" axis around 0 to see the relationship")
+    st.write("Select portion of the 'num' axis around 0 to see the relationship")
 
 st.text("")
 st.markdown("***")
