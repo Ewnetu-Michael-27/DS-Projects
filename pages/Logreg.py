@@ -105,7 +105,7 @@ if button_3:
     z_text = [[str(y) for y in x] for x in z]
 
     # set up figure 
-    fig = ff.create_annotated_heatmap(z, x=x, y=y, annotation_text=z_text, colorscale='Viridis')
+    fig = ff.create_annotated_heatmap(z, y=y, x=x, annotation_text=z_text, colorscale='Viridis')
 
     # add title
     fig.update_layout(title_text='<i><b>Confusion matrix</b></i>',
