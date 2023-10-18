@@ -26,12 +26,15 @@ x_1=X[["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exa
 
 st.write("To further analyze the relationship between the clinical features and CAD, P-value analysis from Logit Model is used below. P-value less than 0.05 suggest a stastically significant relationship between the feature and the target.")
 
+st.text("")
+st.markdown("***")
+
+
+st.write("Below P-values for each feature is shown. The points are red for those feature with P-value>0.05")
+
+
 logit_model=sm.Logit(y["num"],X)
 result_1=logit_model.fit()
-
-col=X.columns
-st.write("Here are the P values for the variables")
-col=X.columns 
 p_values=[]
     
 for i in result_1.pvalues:
