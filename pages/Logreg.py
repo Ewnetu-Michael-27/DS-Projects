@@ -92,10 +92,14 @@ if button_3:
     logreg = LogisticRegression()
     logreg.fit(X_train, y_train)
     y_pred = logreg.predict(X_test)
-    score=logreg.score(X_test, y_test)
+    score_test=logreg.score(X_test, y_test)
+    score_train=logreg.score(X_train, y_train)
     confusion_matrix_1 = confusion_matrix(y_test, y_pred)
+
+    score_y=str(math.floor(score_train*100))+"%"
+    st.metric("Accuracy over Training Samples",score_y)
     
-    score_x=str(math.floor(score*100))+"%"
+    score_x=str(math.floor(score_test*100))+"%"
     st.metric("Accuracy over Test Samples",score_x)
 
     z = np.flip(confusion_matrix_1,0)
