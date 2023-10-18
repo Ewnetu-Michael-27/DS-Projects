@@ -126,6 +126,8 @@ st.plotly_chart(fig)
 st.text("")
 st.markdown("***")
 
+st.write("Level of Cholestrol (Chol) is not a good indicator of presence of CAD.")
+
 fig_2 = px.parallel_coordinates(df_heart[["chol","num"]], color="num", 
                               labels={"num": "Num",
                 "age": "Age", "thalach": "Thalach",
