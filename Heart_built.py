@@ -94,9 +94,9 @@ with st.expander("See explanation"):
     elif option1=="fbs":
         st.write("Fasting Blood Sugar feature is imbalanced also it does not help in discerning presence of CAD")
     elif option1=="restecg":
-        st.write("Resting Electrocardiographic Results")
+        st.write("Increasing value of restecg very slightly correlates with the presence of CAD")
     elif option1=="exang":
-        st.write("Exercise Induced Angina")
+        st.write("")
     elif option1=="slope":
         st.write("The Slope of the peak exercise ST segment")
     elif option1=="ca":
