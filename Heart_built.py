@@ -65,33 +65,36 @@ elif option=="num":
 st.text("")
 st.markdown("***")
 
+st.write("Out of the 13 clinical and non-invasive tests (Features), 8 of them are categorical variables. Below, let's see their relationship with the presence of CAD (num)")
+
+option1=st.selectbox(
+    "Pick a categorical variable to see its relatioship with num",
+    ("sex", "cp", "fbs", "restecg","exang", "slope", "ca", "thal")
+)
+pd_plot=pd.crosstab(df_heart[option1], df_heart["num"]).plot(kind='bar')
+st.pyplot(pd_plot.figure)
+with st.expander("See explanation"):
+    st.write("Text will be added")
+             
+
+st.text("")
+st.markdown("***")
+
+st.write("The rest 5 Features are continous variables. Below, let's see their relationship with the presence of CAD (num)")
+
 option2=st.selectbox(
-    "Pick a variable to see its relatioship with num",
-    ("age","sex", "cp", "trestbps", "chol", 
-     "fbs", "restecg", "thalach", 
-     "exang", "oldpeak", "slope", "ca", "thal", "num")
+    "Pick a continious variable to see its relatioship with num",
+    ("age", "trestbps", "chol", "thalach", "oldpeak")
 )
 
+chart_alt=alt.Chart(df_heart).mark_boxplot().encode(
+alt.Y(option2, type='quantitative').scale(zero=True),
+alt.X('num:N', type='nominal'),
+color=alt.Color('num:N')).properties(width=600).interactive()
 
-#Continous variable
-if option2 in ["oldpeak", "trestbps", "thalach", "age", "chol"]:
-    chart_alt=alt.Chart(df_heart).mark_boxplot().encode(
-    alt.Y(option2, type='quantitative').scale(zero=True),
-    alt.X('num:N', type='nominal'),
-    color=alt.Color('num:N')).properties(width=600).interactive()
-
-    st.altair_chart(chart_alt)
-
-#categorical variables
-elif option2 in ["sex", "cp", "fbs", "restecg", "exang", "slope", "ca", "thal", "num"]:
-    pd_plot=pd.crosstab(df_heart[option2], df_heart["num"]).plot(kind='bar')
-    st.pyplot(pd_plot.figure)
-    #chart_alt_2=alt.Chart(df_heart).mark_boxplot().encode(
-    #alt.Y(option2, type='nominal'),
-    #alt.X('num:N', type='nominal'),
-    #color='num:N').properties(width=600).interactive()
-
-    #st.altair_chart(chart_alt_2)
+st.altair_chart(chart_alt)
+with st.expander("See explanation"):
+    st.write("Text will be added")
 
 st.text("")
 st.markdown("***")
