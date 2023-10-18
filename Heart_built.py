@@ -98,6 +98,7 @@ with st.expander("See explanation"):
 st.text("")
 st.markdown("***")
 
+st.write("**Each Feature Vs The Target**")
 st.write("Out of the 13 clinical and non-invasive tests (Features), 8 of them are categorical variables. Below, let's see their relationship with the presence of CAD (num)")
 
 option1=st.selectbox(
@@ -116,13 +117,13 @@ with st.expander("See explanation"):
     elif option1=="restecg":
         st.write("Increasing value of restecg very slightly correlates with the presence of CAD")
     elif option1=="exang":
-        st.write("")
+        st.write("Excersie Induced Angina correlates with increased presence of CAD")
     elif option1=="slope":
-        st.write("The Slope of the peak exercise ST segment")
+        st.write("Increasse in slope value is slightly correlated with increased presence of CAD")
     elif option1=="ca":
-        st.write("Number of major vessels colored by fluroscopy")
+        st.write("More blood vessels colored by flouroscopy relates with increased presence of CAD")
     elif option1=="thal":
-        st.write("Thallium scintigraphy")
+        st.write("Higher values of Thallium scintigraphy relates with the presence of CAD")
             
 
 st.text("")
@@ -143,15 +144,15 @@ color=alt.Color('num:N')).properties(width=600).interactive()
 st.altair_chart(chart_alt)
 with st.expander("See explanation"):
      if option2=="age":
-         st.write("age")
+         st.write("Median age of presence of CAD is slightly more than median age of absence of CAD")
      elif option2=="trestbps":
-         st.write("trestbps")
+         st.write("For both, absence and presence of CAD, Resting Blood Pressure is relatively the same")
      elif option2=="chol":
-         st.write("chol")
+         st.write("For both, absence and presence of CAD, Serum Cholestrol level is relatively the same")
      elif option2=="thalach":
-         st.write("thalach")
+         st.write("Higher max heart rate is achived in absence of CAD than presence")
      elif option2=="oldpeak":
-         st.write("oldpeak")
+         st.write("Presence of CAD relates with more ST Depression induced by excercise")
     
 
 st.text("")
@@ -176,7 +177,7 @@ st.markdown("***")
 st.write("Level of Cholestrol (Chol), Resting Blood Pressure (Trestbps), Fasting Blood Sugar (FBS), Resting Electrocardiographic Results (Restecg), and The Slope of the peak excercise ST segment (Slope) are not a good indicators for the presence of CAD in of themselves. Hence, both output of the target, 0 and 1, are maped to the same values of the features")
 
 option3=st.selectbox(
-    "Add text",
+    "Select From the following Features to see parallel plot vs num",
     ("chol", "trestbps","fbs", "restecg","slope")
 )
 
