@@ -17,6 +17,8 @@ st.image(image)
 col=["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope", "ca", "thal", "num"]
 df_heart=pd.read_csv("df_heart_clean_2.csv")
 
+col_1=["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope", "ca", "thal", "num"]
+df_heart_mi=pd.read_csv("processed.cleveland.data", names=col_1)
 
 st.title("Predicting The Presence of Coronary Artery Disease (CAD)")
 
@@ -64,6 +66,21 @@ elif option=="thal":
     st.write("Thallium scintigraphy. 3: Normal, 6: Fixed Defect, 7: Reversable Defect")
 elif option=="num":
     st.write("Diagnosis of Heart Disease (Angiographic Disease Status)")
+
+st.text("")
+st.markdown("***")
+
+st.write("**About The Data**")
+tab_a,tab_b=st.tab(["The dataset before imputation.","The dataset after imputation."])
+with tab_a:
+    fig=plt.figure(figsize=(20,4))
+    sns.heatmap(df_heart_mi.eq('?').transpose(), cmap="crest")
+    st.pyplot(fig)
+with tab_b:
+    fig=plt.figure(figsize=(20,4))
+    sns.heatmap(df_heart.eq('?').transpose(), cmap="crest")
+    st.pyplot(fig)
+
 
 st.text("")
 st.markdown("***")
