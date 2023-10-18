@@ -123,15 +123,15 @@ color=alt.Color('num:N')).properties(width=600).interactive()
 st.altair_chart(chart_alt)
 with st.expander("See explanation"):
      if option2=="age":
-        st.write("Sex of the Individual")
+        st.write("age")
     elif option2=="trestbps":
-        st.write("Chest Pain Types")
+        st.write("trestbps")
     elif option2=="chol":
-        st.write("Fasting Blood Sugar")
+        st.write("chol")
     elif option2=="thalach":
-        st.write("Resting Electrocardiographic Results")
+        st.write("thalach")
     elif option2=="oldpeak":
-        st.write("Exercise Induced Angina")
+        st.write("oldpeak")
     
 
 st.text("")
