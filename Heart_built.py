@@ -197,5 +197,5 @@ st.plotly_chart(fig_2)
 
 st.write("**Quick Summary**")
 st.write("Out of the 13 features, 5 features have weak influence on the presence or absence of CAD (Chol,Trestbps,FBS,Restecg,Slope)")
-st.write("In the next page, the relationship between the features and the targets is explored from the perspective of prediction modeling")
+st.write("**In the next page**, the relationship between the features and the targets is explored from the perspective of prediction modeling")
 
