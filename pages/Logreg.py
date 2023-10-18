@@ -102,7 +102,7 @@ if button_3:
     y =  ['True 1', 'True 0']
 
     # change each element of z to type string for annotations
-    z_text = [[str(y) for y in x] for x in z]
+    z_text = [[str(x) for x in y] for y in z]
 
     # set up figure 
     fig = ff.create_annotated_heatmap(z, y=y, x=x, annotation_text=z_text, colorscale='Viridis')
