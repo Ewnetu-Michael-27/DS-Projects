@@ -15,7 +15,7 @@ st.set_page_config(
     page_title="Intro CAD and The Heart Dataset",
 )
 
-st.title("Main Page")
+st.title("Pridicting Presence of Coronary Artery Disease")
 
 st.write("*Regarding prediction model, check second page on sidebar* :sunglasses:")
 
