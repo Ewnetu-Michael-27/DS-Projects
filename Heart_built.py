@@ -73,7 +73,7 @@ st.text("")
 st.markdown("***")
 
 st.write("**About The Dataset**")
-st.write("")
+st.write("The data is relatively clean: only 6 missing values in 303 rows; only 2 columns affected. Moreover, the missigness seems MAR. KNN imputation is used to fix the missigness")
 tab_a,tab_b=st.tabs(["The dataset before imputation","The dataset after imputation"])
 with tab_a:
     fig=plt.figure(figsize=(20,4))
