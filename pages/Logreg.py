@@ -97,7 +97,7 @@ if button_3:
     score_x=str(math.floor(score*100))+"%"
     st.metric("Accuracy over Test Samples",score_x)
 
-    z = confusion_matrix_1
+    z = np.flip(confusion_matrix_1,0)
     x = ['Predict 0', 'Prdict 1']
     y =  ['True 1', 'True 0']
 
@@ -105,7 +105,7 @@ if button_3:
     z_text = [[str(x) for x in y] for y in z]
 
     # set up figure 
-    fig = ff.create_annotated_heatmap(z, y=x, x=y, annotation_text=z_text, colorscale='Viridis')
+    fig = ff.create_annotated_heatmap(z, y=y, x=x, annotation_text=z_text, colorscale='Viridis')
 
     # add title
     fig.update_layout(title_text='<i><b>Confusion matrix</b></i>',
