@@ -13,7 +13,7 @@ import math
 st.set_page_config(
     page_title="Logreg on The Heart Dataset",
 )
-st.title("Second Page")
+st.title("Further Analysis on Clinical Features and CAD")
 
 #col=["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope", "ca", "thal"]
 
