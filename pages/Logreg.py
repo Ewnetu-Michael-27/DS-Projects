@@ -13,7 +13,7 @@ import math
 st.set_page_config(
     page_title="Logreg on The Heart Dataset",
 )
-st.title("Further Analysis on Clinical Features and CAD")
+st.title("Further Analysis on The Clinical Features and CAD")
 
 #col=["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope", "ca", "thal"]
 
@@ -24,7 +24,7 @@ y=pd.read_csv("y.csv", index_col=False)
 x_1=X[["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope", "ca", "thal"]]
 
 
-st.write("Click here to utlize the Logit Model from Statsmodel and check the performance of each variables")
+st.write("To further analyze the relationship between the clinical features and CAD, P-value analysis from Logit Model is used below. P-value less than 0.05 suggest a stastically significant relationship between the feature and the target.")
 
 logit_model=sm.Logit(y["num"],X)
 result_1=logit_model.fit()
