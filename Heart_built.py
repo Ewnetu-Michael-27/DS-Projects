@@ -65,6 +65,16 @@ elif option=="num":
 st.text("")
 st.markdown("***")
 
+st.write("In this dataset, 'num' is the target variable that shows the presence of CAD: 0 for absence and 1 for presence.")
+pd_plot=pd.crosstab(df_heart["num"], df_heart["num"]).plot(kind='bar')
+st.pyplot(pd_plot.figure)
+with st.expander("See explanation"):
+    st.write("The target is balanced. Roughly equal number of values for presence and absence.")
+
+
+st.text("")
+st.markdown("***")
+
 st.write("Out of the 13 clinical and non-invasive tests (Features), 8 of them are categorical variables. Below, let's see their relationship with the presence of CAD (num)")
 
 option1=st.selectbox(
