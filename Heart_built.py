@@ -6,6 +6,11 @@ import pandas as pd
 import plotly.express as px
 from PIL import Image
 
+
+st.set_page_config(
+    page_title="Intro CAD and The Heart Dataset",
+)
+
 image=Image.open("heart.jpg")
 st.image(image)
 
@@ -13,9 +18,6 @@ col=["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang
 df_heart=pd.read_csv("df_heart_clean_2.csv")
 
 
-st.set_page_config(
-    page_title="Intro CAD and The Heart Dataset",
-)
 
 st.title("Pridicting Presence of Coronary Artery Disease (CAD)")
 
