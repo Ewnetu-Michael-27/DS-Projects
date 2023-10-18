@@ -26,9 +26,6 @@ x_1=X[["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exa
 
 st.write("Click here to utlize the Logit Model from Statsmodel and check the performance of each variables")
 
-button_1=st.button("Logit Model")
-
-
 logit_model=sm.Logit(y["num"],X)
 result_1=logit_model.fit()
 
@@ -42,27 +39,26 @@ for i in result_1.pvalues:
 
 df_p_val=pd.DataFrame(list(zip(p_values, col)), columns=["P_values", "Variables"])
 chart_1 = alt.Chart(df_p_val).mark_point().encode(
-     x='Variables:N',
-      y="P_values:Q",
-        # The highlight will be set on the result of a conditional statement
-        color=alt.condition(
-            alt.datum.P_values > 0.05,  
-            alt.value('red'),     
-            alt.value('blue')   
+    x='Variables:N',
+    y="P_values:Q",
+    # The highlight will be set on the result of a conditional statement
+    color=alt.condition(
+        alt.datum.P_values > 0.05,  
+        alt.value('red'),     
+        alt.value('blue')   
         ),
         tooltip=["Variables","P_values"]
     ).properties(width=600)
     #line = alt.Chart().mark_rule(color="red").encode(y=alt.datum(0.05),size=alt.value(5))
     #chart_main=line+chart_1
 
-    tab1, tab2, tab3=st.tabs(["P_values chart","Variables with P_value>0.05", "Variables with P_value<0.05"])
-
-    with tab1:
-        st.altair_chart(chart_1,use_container_width=True)
-    with tab2:
-        st.dataframe(df_p_val[df_p_val["P_values"]>0.05])
-    with tab3:
-        st.dataframe(df_p_val[df_p_val["P_values"]<0.05])
+tab1, tab2, tab3=st.tabs(["P_values chart","Variables with P_value>0.05", "Variables with P_value<0.05"])
+with tab1:
+    st.altair_chart(chart_1,use_container_width=True)
+with tab2:
+    st.dataframe(df_p_val[df_p_val["P_values"]>0.05])
+with tab3:
+    st.dataframe(df_p_val[df_p_val["P_values"]<0.05])
 
 st.text("")
 st.markdown("***")
