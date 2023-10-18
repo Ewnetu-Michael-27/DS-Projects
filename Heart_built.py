@@ -25,7 +25,8 @@ st.title("Predicting The Presence of Coronary Artery Disease (CAD)")
 
 st.write("Coronary artery disease (CAD) is caused by plaque buildup in the wall of the arteries that supply blood to the heart. Accoring to CDC, it is the most common type of heart disease in the US, killing 375,476 people in 2021.")
 
-st.write("The following dataset explores the relationship between 13 clinical and non-invasive tests and the presence of CAD for the goal of building a prediction model.")
+
+st.write("The dataset that was generated to study discriminant function models for estimating probabilities of coronary artery disease from clinical and non-invasive test results of 303 patients from Cleveland Clinic in Cleveland, Ohio. Concretely, the dataset explores the relationship between 13 clinical and non-invasive tests and the presence of CAD for the goal of building a prediction model.")
 
 st.sidebar.success("Select a page above.")
 
@@ -71,7 +72,8 @@ elif option=="num":
 st.text("")
 st.markdown("***")
 
-st.write("**About The Data**")
+st.write("**About The Dataset**")
+st.write("")
 tab_a,tab_b=st.tabs(["The dataset before imputation","The dataset after imputation"])
 with tab_a:
     fig=plt.figure(figsize=(20,4))
