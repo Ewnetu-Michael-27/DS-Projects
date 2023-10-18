@@ -14,7 +14,7 @@ import numpy as np
 st.set_page_config(
     page_title="Logreg on The Heart Dataset",
 )
-st.title("Further Analysis on The Clinical Features and CAD")
+st.title("Further Analysis on The Clinical Features vs CAD")
 
 #col=["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope", "ca", "thal"]
 
@@ -31,7 +31,7 @@ st.text("")
 st.markdown("***")
 
 
-st.write("Below, P-values for each feature are shown. The points are red for those feature with P-value >0.05")
+st.write("Below, P-values for each feature are shown. The points are red for those feature with P-value >0.05 (**See explanation below image**)")
 
 
 logit_model=sm.Logit(y["num"],X)
@@ -65,14 +65,13 @@ with tab2:
 with tab3:
     st.dataframe(df_p_val[df_p_val["P_values"]<0.05])
 with st.expander("See explanation"):
-    st.write("Text will be added")
+    st.write("In the previous page, IDA/EDA showed that 5 features have weak influence on the presence or absence of CAD (Chol, Trestbps, FBS, Restecg, Slope). The P-value analysis flagged those features to have p_value>0.05 ")
 
 st.text("")
 st.markdown("***")
+ 
 
-#recompute P values 
-
-st.markdown("Pick Variables and run Logistic Regression Model (To increase accuracy, pick variables with P values <0.05)")
+st.markdown("Below, Logistic Regression Model is utilised. Higher accuracy is expected for the features with P_value<0.05 and vice-versa")
 
 #button_2=st.button("Pick variables")
 
