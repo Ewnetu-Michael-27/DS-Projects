@@ -24,13 +24,13 @@ y=pd.read_csv("y.csv", index_col=False)
 x_1=X[["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope", "ca", "thal"]]
 
 
-st.write("To further analyze the relationship between the clinical features and CAD, P-value analysis from Logit Model is used below. P-value less than 0.05 suggest a stastically significant relationship between the feature and the target.")
+st.write("To further analyze the relationship between the clinical features and CAD, P-value analysis from Logit Model is utilised. P-value less than 0.05 suggest a stastically significant relationship between the feature and the target.")
 
 st.text("")
 st.markdown("***")
 
 
-st.write("Below P-values for each feature is shown. The points are red for those feature with P-value>0.05")
+st.write("Below, P-values for each feature are shown. The points are red for those feature with P-value >0.05")
 
 
 logit_model=sm.Logit(y["num"],X)
