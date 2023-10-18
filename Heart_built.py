@@ -87,8 +87,23 @@ option1=st.selectbox(
 pd_plot=pd.crosstab(df_heart[option1], df_heart["num"]).plot(kind='bar')
 st.pyplot(pd_plot.figure)
 with st.expander("See explanation"):
-    st.write("Text will be added")
-             
+    if option=="sex":
+        st.write("Sex of the Individual")
+    elif option=="cp":
+        st.write("Chest Pain Types")
+    elif option=="fbs":
+        st.write("Fasting Blood Sugar")
+    elif option=="restecg":
+        st.write("Resting Electrocardiographic Results")
+    elif option=="exang":
+        st.write("Exercise Induced Angina")
+    elif option=="slope":
+        st.write("The Slope of the peak exercise ST segment")
+    elif option=="ca":
+        st.write("Number of major vessels colored by fluroscopy")
+    elif option=="thal":
+        st.write("Thallium scintigraphy")
+            
 
 st.text("")
 st.markdown("***")
