@@ -207,6 +207,6 @@ st.plotly_chart(fig_2)
 
 st.write("**Quick Summary**")
 st.write("Out of the 13 features, 5 features have weak influence on the presence or absence of CAD ")
-st.write("Cholesterol level in Blood: Chol, Resting blood pressure: Trestbps,Fasting Blood Sugar :FBS, Resting electrocardiographic results: Restecg, and The Slope Of The Peak Exercise ST Segment: Slope")
+st.write("Cholesterol level in Blood: Chol, Resting blood pressure: Trestbps,Fasting Blood Sugar: FBS, Resting electrocardiographic results: Restecg, and The Slope Of The Peak Exercise ST Segment: Slope")
 st.write("**In the next page**, the relationship between the features and the targets is explored from the perspective of prediction modeling, which will show whether the observations from the EDA are accurate")
 
