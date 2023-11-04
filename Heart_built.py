@@ -6,6 +6,7 @@ import pandas as pd
 import plotly.express as px
 from PIL import Image
 import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 
 
 st.set_page_config(
@@ -89,8 +90,17 @@ st.text("")
 st.markdown("***")
 
 st.write("In this dataset, 'num' is the target variable that shows the presence of CAD: 0 for absence (<50% diameter narrowing) and 1 for presence (>50% diameter narrowing). (See explanation below)")
-pd_plot=pd.crosstab(df_heart["num"], df_heart["num"]).plot(kind='bar')
-st.pyplot(pd_plot.figure)
+tabz_z1,tab_z2=st.tabs(["Values of The Target (Pie Chart)", "Values of The Target (Bar Graph)"])
+with tabz_z1:
+    labels = ['0 (Absence)','1 (Presence)']
+    values = [df_heart["num"].value_counts()[0], df_heart["num"].value_counts()[1]]
+
+    fig_z = go.Figure(data=[go.Pie(labels=labels, values=values)])
+    st.plotly_chart(fig_z)
+with tab_z2:
+    pd_plot=pd.crosstab(df_heart["num"], df_heart["num"]).plot(kind='bar')
+    st.pyplot(pd_plot.figure)
+
 with st.expander("See explanation"):
     st.write("The target is balanced. Roughly equal number of values for presence and absence.")
 
