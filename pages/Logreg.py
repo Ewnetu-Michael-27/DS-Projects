@@ -71,8 +71,9 @@ st.text("")
 st.markdown("***")
  
 
-st.markdown("Below, Logistic Regression Model is utilised. Higher accuracy is expected for the features with P_value<0.05 and vice-versa")
-
+#st.markdown("Below, Logistic Regression Model is utilised. Higher accuracy is expected for the features with P_value<0.05 and vice-versa")
+st.markdown("Below, Logistic Regression Model is utilised. Higher accuracy is expected for the features with P_value<0.05 and vice-versa.")
+st.markdown("Please, try different combinations of the features and see how the accuracy is impacted.")
 #button_2=st.button("Pick variables")
 
 #list_p_val=[]
